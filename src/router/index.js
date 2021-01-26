@@ -1,6 +1,7 @@
 import Home from '@/views/Home'
 import Login from '@/views/Login'
 import Child from '@/views/Home/child'
+import List from '@/views/Home/list'
 
 const routes = [
   {
@@ -9,7 +10,12 @@ const routes = [
     routes: [
       {
         path: '/child',
-        component: Child
+        component: Child,
+      },
+      {
+        path: '/list',
+        component: List,
+        redirect: true,
       }
     ]
   },

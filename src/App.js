@@ -1,5 +1,5 @@
 // import Header from './components/header'
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom'
 
 import routes from '@/router'
 
@@ -9,11 +9,8 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Header></Header> */}
       <Router>
         <Switch>
-          {/* <Route path="/login" component={routes[1].component}></Route>
-          <Route path="/" component={routes[0].component}></Route> */}
           { reversedRoutes.map((route, i) => (
             <RouteWithSubRoutes key={i} {...route}></RouteWithSubRoutes>
           )) }

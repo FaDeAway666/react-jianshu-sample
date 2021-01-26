@@ -51,7 +51,9 @@ module.exports = {
         publicPath: '/',
         host: 'localhost',
         port: 3001,
-        hot: true
+        hot: true,
+        inline: true,  // 解决直接在地址栏输入url，显示404的问题
+	    historyApiFallback: true  // 解决直接在地址栏输入url，显示404的问题
     },
     plugins: [
         new CleanWebpackPlugin(),
